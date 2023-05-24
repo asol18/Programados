@@ -2,21 +2,25 @@
 import java.util.Scanner;
 
 public class EjercicioCinco{
+
     public static void main(String[] args){
     Scanner scanner= new Scanner(System.in);
 
-    System.out.print("Ingrese un número: ");
-    int numero= scanner.nextInt();
-    scanner.close();
 
-    double factorial= calcularFactorial(numero);
-    System.out.println("El factorial de: " + numero + " es " + factorial);
+    while(num<=0){
+        System.out.print("Ingrese un número entero positvo: ");
+        int num= scanner.nextInt();
+    }
+
+    int factorial= calcularFactorial(num);
+    System.out.println("El factorial de: " + num + " es " + factorial);
+
     } 
-    public static double calcularFactorial(int n){
+    public static int calcularFactorial(int n){
       if (n == 0 || n == 1){
         return 1;
       }else {
-        double factorial= 1;
+        int factorial= 1;
         for (int i= 2; i<= n; i++){
           factorial*= i;
         }
@@ -24,9 +28,3 @@ public class EjercicioCinco{
       }
   } 
 }
-<<<<<<< HEAD
-
-
- 
-=======
->>>>>>> 75d61d52e0891d4ea7b25d5800317642b7aa099a
